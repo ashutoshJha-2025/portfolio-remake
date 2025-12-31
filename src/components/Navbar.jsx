@@ -21,7 +21,7 @@ export default function Navbar() {
                 {/* Mobile Hamburger (LEFT, < sm) */}
                 <button
                     onClick={() => setOpen(!open)}
-                    className="sm:hidden bg-orange-500 p-3 rounded-full mr-auto cursor-pointer"
+                    className="sm:hidden bg-[#f37329] p-3 rounded-full mr-auto cursor-pointer"
                     aria-label="Toggle menu"
                 >
                     <div className="space-y-1.5">
