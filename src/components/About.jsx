@@ -3,7 +3,7 @@ import background_image from "../assets/bg_image.png";
 function About() {
     return (
         <>
-            <div className="h-screen w-screen bg-cover bg-center bg-no-repeat rounded-4xl shadow-[0_-10px_30px_0_rgba(17,17,17,0.9)] relative" style={{ backgroundImage: `url(${background_image})` }}>
+            <div id="About" className="h-screen w-screen bg-cover bg-center bg-no-repeat rounded-4xl shadow-[0_-10px_30px_0_rgba(17,17,17,0.9)] relative" style={{ backgroundImage: `url(${background_image})` }}>
                 <div className="flex gap-3 text-white lg:text-6xl font-semibold absolute sm:top-25 left-1/2 -translate-x-1/2 md:text-4xl max-sm:top-5 max-sm:text-3xl">
                     <h1>About</h1>
                     <h1 className="text-[#f37329]">Me</h1>
