@@ -42,7 +42,7 @@ export default function Navbar() {
 
                 {/* Desktop Capsule Navbar (CENTER, sm+) */}
                 <div className="hidden sm:flex mx-auto bg-black/90 backdrop-blur 
-                        rounded-full px-3 py-2 space-x-2 shadow-lg">
+                        rounded-full px-3 py-2 space-x-2 shadow-lg border border-white">
                     {navLinks.map((link) => (
                         <button
                             key={link}
