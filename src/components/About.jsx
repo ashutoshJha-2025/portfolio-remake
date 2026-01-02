@@ -1,4 +1,4 @@
-import background_image from "../assets/bg_image.png";
+import background_image from "../assets/bg_image.webp";
 
 function About() {
     return (
