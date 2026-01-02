@@ -8,3 +8,55 @@ body,
     width: 100vw;
     overflow-x: hidden;
 }
+
+@property --angle1 {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@property --angle2 {
+    syntax: "<angle>";
+    initial-value: 180deg;
+    inherits: false;
+}
+
+.rotating-card::before,
+.rotating-card::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 24px;
+    z-index: -1;
+    padding: 3px;
+}
+
+.rotating-card::before {
+    background: conic-gradient(from var(--angle1), transparent 87%, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    animation: spin1 5s linear infinite;
+}
+
+.rotating-card::after {
+    background: conic-gradient(from var(--angle2), transparent 87%, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    animation: spin2 5s linear infinite;
+}
+
+@keyframes spin1 {
+    from {
+        --angle1: 0deg;
+    }
+
+    to {
+        --angle1: 360deg;
+    }
+} 
+
+@keyframes spin2 {
+    from {
+        --angle2: 180deg;
+    }
+
+    to {
+        --angle2: 540deg;
+    }
+}
