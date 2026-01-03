@@ -7,7 +7,7 @@ import arrow_img from "../assets/arrow.svg";
 
 
 function Contact() {
-    const resume = "public/Resume.pdf"
+    const resume = `${process.env.PUBLIC_URL}/resume.pdf`
 
     return (
         <>

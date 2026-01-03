@@ -5,10 +5,10 @@ import adobe from "../assets/adobe india.png";
 import python from "../assets/python course.png";
 
 function Certificates() {
-    const javaCert = "public/java_certificate.pdf"
-    const unstopCert = "public/unstop_certificate.pdf"
-    const adobeCert = "public/adobe_certificate.pdf"
-    const pythonCert = "public/python_course.pdf"
+    const javaCert = `${process.env.PUBLIC_URL}/java_certificate.pdf`
+    const unstopCert = `${process.env.PUBLIC_URL}/unstop_certificate.pdf`
+    const adobeCert = `${process.env.PUBLIC_URL}/adobe_certificate.pdf`
+    const pythonCert = `${process.env.PUBLIC_URL}/python_course.pdf`
     return (
         <>
             <div id="certificates" className="relative h-screen w-screen max-sm:h-[150%]">
