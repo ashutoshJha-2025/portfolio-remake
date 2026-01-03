@@ -22,25 +22,25 @@ function Certificates() {
                         image={unstop}
                         issuer="Unstop"
                         description="Participated in an individual online hackathon of AlgoQuiz -DSA MCQ"
-                        link={unstopCert}
+                        link={`https://ashutoshjha-2025.github.io/portfolio-remake${unstopCert}`}
                     />
                     <Card
                         image={java}
                         issuer="IIT Bombay"
                         description="Completed a course covering Java fundamentals, OOP concepts."
-                        link={javaCert}
+                        link={`https://ashutoshjha-2025.github.io/portfolio-remake${javaCert}`}
                     />
                     <Card
                         image={adobe}
                         issuer="Adobe India"
                         description="Participated in the Adobe India Hackathon"
-                        link={adobeCert}
+                        link={`https://ashutoshjha-2025.github.io/portfolio-remake${adobeCert}`}
                     />
                     <Card
                         image={python}
                         issuer="Scaler"
                         description="Completed a beginner-level Python course covering core syntax, data types, and basic problem-solving concepts."
-                        link={pythonCert}
+                        link={`https://ashutoshjha-2025.github.io/portfolio-remake${pythonCert}`}
                     />
 
                 </div>

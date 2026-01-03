@@ -14,7 +14,7 @@ function Contact() {
             <div id="contact" className="w-screen h-screen relative max-sm:h-[210%]">
                 <div className="absolute top-2.5 left-5 flex flex-col items-center max-md:top-10 max-sm:top-220">
                     <h3 className="text-[#f37329] text-5xl font-semibold max-lg:text-4xl max-md:text-3xl">Resume</h3>
-                    <button className="bg-[#0FA673] text-white py-1.5 px-2.5 rounded-lg text-md max-md:text-sm font-medium cursor-pointer hover:bg-[#0c8e60] transition-all duration-150 ease-in" onClick={() => window.open(resume, "_blank")}>📄 View Resume</button>
+                    <button className="bg-[#0FA673] text-white py-1.5 px-2.5 rounded-lg text-md max-md:text-sm font-medium cursor-pointer hover:bg-[#0c8e60] transition-all duration-150 ease-in" onClick={() => window.open(`https://ashutoshjha-2025.github.io/portfolio-remake${resume}`, "_blank")}>📄 View Resume</button>
                 </div>
 
                 <div className="flex flex-col items-center  absolute top-20 left-1/2 -translate-x-1/2 max-sm:top-250">
