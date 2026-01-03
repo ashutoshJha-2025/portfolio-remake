@@ -5,7 +5,7 @@ import double_quotes from "../assets/double_quotes.png";
 function Home() {
     return (
         <>
-            <div id="home-screen" className="w-screen h-screen relative">
+            <div id="home" className="w-screen h-screen relative">
 
                 <div className="flex flex-col justify-center items-center absolute top-20 left-1/2 -translate-x-1/2 ">
                     <button className="border rounded-3xl py-1.5 px-4 cursor-pointer" onClick={() => { alert("Welcome to my Portfolio! Feel free to explore my projects and journey.") }}>Hello</button>

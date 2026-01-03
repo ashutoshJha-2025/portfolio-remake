@@ -11,7 +11,7 @@ function Certificates() {
     const pythonCert = "public/python_course.pdf"
     return (
         <>
-            <div id="Certificates" className="relative h-screen w-screen max-sm:h-[150%]">
+            <div id="certificates" className="relative h-screen w-screen max-sm:h-[150%]">
 
                 <div className="flex text-white lg:text-6xl font-semibold absolute sm:top-20 left-1/2 -translate-x-1/2 md:text-4xl max-sm:top-10 max-sm:text-3xl">
                     <h1 className="text-[#f37329]">Certificates</h1>

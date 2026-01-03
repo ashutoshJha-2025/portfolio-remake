@@ -11,7 +11,7 @@ function Contact() {
 
     return (
         <>
-            <div className="w-screen h-screen relative max-sm:h-[230%]">
+            <div id="contact" className="w-screen h-screen relative max-sm:h-[210%]">
                 <div className="absolute top-2.5 left-5 flex flex-col items-center max-md:top-10 max-sm:top-220">
                     <h3 className="text-[#f37329] text-5xl font-semibold max-lg:text-4xl max-md:text-3xl">Resume</h3>
                     <button className="bg-[#0FA673] text-white py-1.5 px-2.5 rounded-lg text-md max-md:text-sm font-medium cursor-pointer hover:bg-[#0c8e60] transition-all duration-150 ease-in" onClick={() => window.open(resume, "_blank")}>📄 View Resume</button>
@@ -23,13 +23,13 @@ function Contact() {
                     <div className="flex ">
                         <div className="bg-[#f5f5f5] shadow-lg flex px-7 py-2 rounded-[40px] justify-between gap-3">
                             <div className="w-10 h-10 bg-[#EF925C] rounded-full flex justify-center items-center"><img src={mailIcon} alt="mail icon" className="w-8" /></div>
-                            <input type="email" placeholder="Enter Email Address" className="w-70 text-lg focus:outline-none max-sm:w-50" />
+                            <input type="email" placeholder="Enter Email Address" className="w-70 text-lg focus:outline-none max-sm:w-40" />
                         </div>
                         <button className="bg-[#f37329] text-white py-1 px-6 rounded-[40px] cursor-pointer text-xl hover:bg-[#d85f19] transition-all duration-150 ease-in" type="submit">Send</button>
                     </div>
                 </div>
 
-                <div className="bg-[#1e1e1e] absolute bottom-0 w-[99%] h-[45%] rounded-t-4xl flex items-center gap-4 justify-around max-sm:h-[30vh]">
+                <div className="bg-[#1e1e1e] absolute bottom-0 w-[99%] h-[45%] rounded-t-4xl flex items-center gap-4 justify-around max-sm:h-[35vh]">
                     <div className="flex flex-col gap-2">
                         <h4 className="text-[#d85f19] font-medium text-lg">Let’s connect here</h4>
 

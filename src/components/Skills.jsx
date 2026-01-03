@@ -3,7 +3,7 @@ function Skills() {
 
     return (
         <>
-            <div id="Skills" className="h-screen w-screen relative ">
+            <div id="skills" className="h-screen w-screen relative ">
                 <h1 className="text-[#f37329] absolute top-20 max-md:left-1/2 max-md:-translate-x-1/2 font-semibold text-6xl max-sm:top-8 md:left-70 lg:left-100 xl:left-150">Skills</h1>
 
                 <div className="w-[95%] h-110 flex absolute bottom-0 left-1/2 -translate-x-1/2 max-sm:bottom-15 justify-around">
