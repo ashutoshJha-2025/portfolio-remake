@@ -3,11 +3,77 @@ import githubIcon from "../assets/github_logo.png"
 import leetcodeIcon from "../assets/leetcode_logo.png"
 import linkedinIcon from "../assets/linkedin_logo.png"
 import arrow_img from "../assets/arrow.svg";
-
-
+import { useState } from 'react'
+import emailjs from '@emailjs/browser';
 
 function Contact() {
     const resume = `/resume.pdf`
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+
+    const handleFeedback = (e) => {
+        e.preventDefault();
+
+        if (!message.trim()) {
+            alert("Error: Message cannot be empty");
+            return;
+        }
+
+        const serviceId = `service_8qv6g85`;
+        const templateId = `template_g3quyja`;
+        const publicKey = `uDw4KwaVC8WwM0_pk`;
+
+        const templateParams = {
+            name: name || "Anonymous",
+            title: "New feedback message for you",
+            time: new Date().toLocaleString(),
+            message: message,
+        };
+
+        emailjs.send(serviceId, templateId, templateParams, publicKey)
+            .then((response) => {
+                console.log(`Email sent successfully !`, response);
+                setName('');
+                setMessage('');
+            })
+            .catch((error) => {
+                console.log("Error sending email: ", error);
+            });
+    }
+
+
+    const emailCollab = (e) => {
+        e.preventDefault();
+
+        if (!email.trim()) {
+            alert("Error: Message cannot be empty");
+            return;
+        }
+
+        const serviceId = `service_8qv6g85`;
+        const templateId = `template_g3quyja`;
+        const publicKey = `uDw4KwaVC8WwM0_pk`;
+
+        const templateParams = {
+            name: "Anonymous",
+            title: "Have a new project idea, let's collab !",
+            time: new Date().toLocaleString(),
+            email: email,
+        };
+
+        emailjs.send(serviceId, templateId, templateParams, publicKey)
+            .then((response) => {
+                console.log(`Email sent successfully !`, response);
+                setEmail('');
+            })
+            .catch((error) => {
+                console.log("Error sending email: ", error);
+            });
+
+    }
 
     return (
         <>
@@ -23,9 +89,9 @@ function Contact() {
                     <div className="flex ">
                         <div className="bg-[#f5f5f5] shadow-lg flex px-7 py-2 rounded-[40px] justify-between gap-3">
                             <div className="w-10 h-10 bg-[#EF925C] rounded-full flex justify-center items-center"><img src={mailIcon} alt="mail icon" className="w-8" /></div>
-                            <input type="email" placeholder="Enter Email Address" className="w-70 text-lg focus:outline-none max-sm:w-40" />
+                            <input type="email" id="quick-email-form" placeholder="Enter Email Address" value={email} onChange={(e) => setEmail(e.target.value)} className="w-70 text-lg focus:outline-none max-sm:w-40" />
                         </div>
-                        <button className="bg-[#f37329] text-white py-1 px-6 rounded-[40px] cursor-pointer text-xl hover:bg-[#d85f19] transition-all duration-150 ease-in" type="submit">Send</button>
+                        <button onClick={emailCollab} className="bg-[#f37329] text-white py-1 px-6 rounded-[40px] cursor-pointer text-xl hover:bg-[#d85f19] transition-all duration-150 ease-in" type="submit">Send</button>
                     </div>
                 </div>
 
@@ -88,9 +154,9 @@ function Contact() {
 
                     <div className="flex flex-col relative h-50 w-70 max-sm:hidden" id="feedback ">
                         <h4 className="text-white font-semibold mb-2.5">Send your feedback or message</h4>
-                        <input type="text" placeholder="your name.. (optional)" className="w-full h-9 rounded-lg py-2 px-3 text-sm mb-2 bg-white focus:outline-none" />
-                        <input type="text" placeholder="Write your message here.." requi className="w-full min-h-15 rounded-lg  p-3 text-sm mb-5 bg-white focus:outline-none" />
-                        <button type="submit" className="bg-[#f37329] absolute right-0 bottom-4 text-white rounded-lg py-0.5 px-5 cursor-pointer text-lg text-center hover:bg-[#d85f19] transition-all duration-150 ease-in">send</button>
+                        <input type="text" value={name} placeholder="your name.." onChange={(e) => setName(e.target.value)} className="w-full h-9 rounded-lg py-2 px-3 text-sm mb-2 bg-white focus:outline-none" />
+                        <input type="text" value={message} placeholder="Write your message here.." required onChange={(e) => setMessage(e.target.value)} className="w-full min-h-15 rounded-lg  p-3 text-sm mb-5 bg-white focus:outline-none" />
+                        <button type="submit" onClick={handleFeedback} className="bg-[#f37329] absolute right-0 bottom-4 text-white rounded-lg py-0.5 px-5 cursor-pointer text-lg text-center hover:bg-[#d85f19] transition-all duration-150 ease-in">send</button>
                     </div>
                 </div>
             </div>
