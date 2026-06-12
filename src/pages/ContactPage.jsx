@@ -5,8 +5,9 @@ import linkedinIcon from "../assets/linkedin_logo.png"
 import arrow_img from "../assets/arrow.svg";
 import { useState } from 'react'
 import emailjs from '@emailjs/browser';
+import { showSuccess, showError,showWarning, showInfo } from "../components/ToastMessageBox.jsx";
 
-function Contact() {
+function ContactPage() {
     const resume = `/resume.pdf`
 
     const [name, setName] = useState('');
@@ -18,7 +19,7 @@ function Contact() {
         e.preventDefault();
 
         if (!message.trim()) {
-            alert("Error: Message cannot be empty");
+            showWarning("Message cannot be empty");
             return;
         }
 
@@ -35,21 +36,21 @@ function Contact() {
 
         emailjs.send(serviceId, templateId, templateParams, publicKey)
             .then((response) => {
-                console.log(`Email sent successfully !`, response);
+                showSuccess(`Email sent successfully`);
                 setName('');
                 setMessage('');
             })
             .catch((error) => {
-                console.log("Error sending email: ", error);
+                showError("Error sending email");
+                console.log('ERROR:-\n', error?.stack || error?.message || error)
             });
     }
-
 
     const emailCollab = (e) => {
         e.preventDefault();
 
         if (!email.trim()) {
-            alert("Error: Message cannot be empty");
+            showWarning("Message cannot be empty");
             return;
         }
 
@@ -66,36 +67,37 @@ function Contact() {
 
         emailjs.send(serviceId, templateId, templateParams, publicKey)
             .then((response) => {
-                console.log(`Email sent successfully !`, response);
+                showSuccess("Email sent successfully");
                 setEmail('');
             })
             .catch((error) => {
-                console.log("Error sending email: ", error);
+                showError("Error sending email: ");
+                console.log('ERROR:-\n', error?.stack || error?.message || error)
             });
 
     }
 
     return (
         <>
-            <div id="contact" className="w-screen h-screen relative max-sm:h-[240%]">
-                <div className="absolute top-2.5 left-5 flex flex-col items-center max-md:top-10 max-sm:top-220">
+            <div id="contact" className="w-screen min-h-screen flex flex-col relative">
+                <div className="flex flex-col items-start justify-end w-full h-33 px-4">
                     <h3 className="text-[#f37329] text-5xl font-semibold max-lg:text-4xl max-md:text-3xl">Resume</h3>
-                    <button className="bg-[#0FA673] text-white py-1.5 px-2.5 rounded-lg text-md max-md:text-sm font-medium cursor-pointer hover:bg-[#0c8e60] transition-all duration-150 ease-in" onClick={() => window.open(`https://ashutoshjha-2025.github.io/portfolio-remake${resume}`, "_blank")}>📄 View Resume</button>
+                    <button className="bg-[#0FA673] text-white py-1.5 px-2.5 rounded-lg text-md max-md:text-sm font-medium cursor-pointer hover:bg-[#0c8e60] transition-all duration-150 ease-in" onClick={() => window.open("https://ik.imagekit.io/ashutosh054/resumes/document_nw-NNpX9Z.pdf?updatedAt=1780812308146", "_blank")}>📄 View Resume</button>
                 </div>
 
-                <div className="flex flex-col items-center  absolute top-20 left-1/2 -translate-x-1/2 max-sm:top-250">
+                <div className="flex flex-col items-center">
                     <h1 className="font-semibold text-[40px] text-center text-[#2d2e32] max-lg:text-3xl max-sm:text-2xl">Have an Awesome Project <br />Idea? <span className="text-[#f37329] ">Let’s Discuss</span></h1>
 
-                    <div className="flex ">
+                    <div className="flex max-[400px]:w-full gap-1 ">
                         <div className="bg-[#f5f5f5] shadow-lg flex px-7 py-2 rounded-[40px] justify-between gap-3">
                             <div className="w-10 h-10 bg-[#EF925C] rounded-full flex justify-center items-center"><img src={mailIcon} alt="mail icon" className="w-8" /></div>
-                            <input type="email" id="quick-email-form" placeholder="Enter Email Address" value={email} onChange={(e) => setEmail(e.target.value)} className="w-70 text-lg focus:outline-none max-sm:w-40 " />
+                            <input type="email" id="quick-email-form" placeholder="Enter Email Address" value={email} onChange={(e) => setEmail(e.target.value)} className="w-70 text-lg focus:outline-none max-sm:w-30 " />
                         </div>
-                        <button onClick={emailCollab} className="bg-[#f37329] text-white py-1 px-6 rounded-[40px] cursor-pointer text-xl hover:bg-[#d85f19] transition-all duration-150 ease-in" type="submit">Send</button>
+                        <button onClick={emailCollab} className="bg-[#f37329] text-white sm:py-1 px-4 sm:px-6 rounded-full cursor-pointer sm:text-xl hover:bg-[#d85f19] transition-all duration-150 ease-in" type="submit">Send</button>
                     </div>
                 </div>
 
-                <div className="bg-[#1e1e1e] absolute bottom-0 w-[99%] h-[45%] rounded-t-4xl flex items-center gap-4 justify-around max-sm:h-[60vh] max-sm:flex-col">
+                <div className="bg-[#1e1e1e] absolute bottom-0 w-full sm:h-[40%] rounded-t-4xl flex items-center gap-4 justify-around max-sm:flex-col">
                     <div className="flex flex-col gap-2">
                         <h4 className="text-[#d85f19] font-medium text-lg">Let’s connect here</h4>
 
@@ -131,18 +133,6 @@ function Contact() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-2 hidden">
-                        <h4 className="text-[#d85f19] font-medium text-lg">Navigation</h4>
-
-                        <ul className="text-white text-sm font-normal flex flex-col gap-1">
-                            <li className="cursor-pointer  hover:bg-white/10 py-1 text-center rounded-xl  transition duration-150 ease-in">Home</li>
-                            <li className="cursor-pointer  hover:bg-white/10 py-1 text-center rounded-xl  transition duration-150 ease-in">About</li>
-                            <li className="cursor-pointer  hover:bg-white/10 py-1 text-center rounded-xl  transition duration-150 ease-in">Skills</li>
-                            <li className="cursor-pointer  hover:bg-white/10 py-1 text-center rounded-xl  transition duration-150 ease-in">Projects</li>
-                            <li className="cursor-pointer  hover:bg-white/10 py-1 text-center rounded-xl  transition duration-150 ease-in">Certificates</li>
-                        </ul>
-                    </div>
-
                     <div className="flex flex-col gap-2 max-md:hidden" id="phone-id">
                         <h4 className="text-[#d85f19] font-medium text-lg">Contact</h4>
 
@@ -159,9 +149,11 @@ function Contact() {
                         <button type="submit" onClick={handleFeedback} className="bg-[#f37329] absolute right-0 bottom-4 text-white rounded-lg py-0.5 px-5 cursor-pointer text-lg text-center hover:bg-[#d85f19] transition-all duration-150 ease-in">send</button>
                     </div>
                 </div>
+
+
             </div>
         </>
     )
 }
 
-export default Contact;
+export default ContactPage;

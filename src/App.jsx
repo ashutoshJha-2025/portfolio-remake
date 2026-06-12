@@ -1,21 +1,22 @@
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Certificates from "./components/Certificates";
-import Contact from "./components/Contact";
+import { Route, Routes } from "react-router-dom";
+import AboutPage from "./pages/AboutPage.jsx";
+import SkillsPage from "./pages/SkillsPage.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
+import { ToastMessageBox } from "./components/ToastMessageBox.jsx";
+import ProjectPage from "./pages/ProjectPage.jsx";
 
 function App() {
   return (
     <>
-      {/* <Navbar /> */}
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Certificates />
-      <Contact />
+    <ToastMessageBox />
+      <Navbar />
+      <Routes>
+        <Route path="/portfolio-remake" element={<AboutPage />} />
+        <Route path="/portfolio-remake/skills" element={<SkillsPage />} />
+        <Route path="/portfolio-remake/contact" element={<ContactPage />} />
+        <Route path="/portfolio-remake/projects" element={<ProjectPage />} />
+      </Routes>
     </>
   )
 }
