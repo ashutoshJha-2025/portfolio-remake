@@ -1,4 +1,11 @@
 import { useNavigate } from "react-router-dom"
+import portfolioBgImage from '../assets/portfolioBgImage.png'
+import expenseTrackerBgImage from '../assets/expenseTrackerBgImage.png'
+import jobPortalBgImage from '../assets/jobPortalBgImage.png'
+import dsaJavaBgImage from '../assets/dsaJavaBgImage.png'
+import reactBgImage from '../assets/reactBgImage.png'
+import weatherAppBgImage from '../assets/weatherAppBgImage.png'
+import thumbnailBgImage from '../assets/ThumbanailDesignBgImage.png'
 
 const projects = [
     {
@@ -18,7 +25,7 @@ const projects = [
         glowColor: "shadow-violet-500/20",
         liveUrl: "https://ashutoshjha-2025.github.io/portfolio-remake/",
         githubUrl: "https://github.com/ashutoshJha-2025/portfolio-remake.git",
-        bgImageUrl: "https://ik.imagekit.io/ashutosh054/Portfolio/Screenshot%202026-06-13%20111542.png",
+        bgImageUrl: portfolioBgImage,
     },
 
     {
@@ -37,7 +44,7 @@ const projects = [
         glowColor: "shadow-cyan-500/20",
         liveUrl: "https://spendify-1b1h.onrender.com/",
         githubUrl: "https://github.com/ashutoshJha-2025/Expense_Tracker.git",
-        bgImageUrl: "https://ik.imagekit.io/ashutosh054/Portfolio/image.png"
+        bgImageUrl: expenseTrackerBgImage
     },
 
     {
@@ -55,7 +62,7 @@ const projects = [
         glowColor: "shadow-amber-500/20",
         liveUrl: "https://job-portal-one-phi-72.vercel.app",
         githubUrl: "https://github.com/ashutoshJha-2025/Job_Portal.git",
-        bgImageUrl: "https://ik.imagekit.io/ashutosh054/Portfolio/image.png?updatedAt=1781330316381"
+        bgImageUrl: jobPortalBgImage
     },
 
     {
@@ -74,7 +81,7 @@ const projects = [
         glowColor: "shadow-orange-500/20",
         liveUrl: "https://github.com/ashutoshJha-2025/DSA-Projects-in-java.git",
         githubUrl: "https://github.com/ashutoshJha-2025/DSA-Projects-in-java.git",
-        bgImageUrl: "https://ik.imagekit.io/ashutosh054/Portfolio/image.png?updatedAt=1781331208334"
+        bgImageUrl: dsaJavaBgImage
     },
 
     {
@@ -93,7 +100,7 @@ const projects = [
         glowColor: "shadow-pink-500/20",
         liveUrl: "https://ashutoshjha-2025.github.io/ReactJS_Projects/02_ProductStore/",
         githubUrl: "https://github.com/ashutoshJha-2025/ReactJS_Projects.git",
-        bgImageUrl: "https://ik.imagekit.io/ashutosh054/Portfolio/image.png?updatedAt=1781331318209"
+        bgImageUrl: reactBgImage
     },
 
     {
@@ -112,7 +119,7 @@ const projects = [
         glowColor: "shadow-yellow-500/20",
         liveUrl: "https://ashutoshjha-2025.github.io/Frontend-Projects/WeatherApp/",
         githubUrl: "https://github.com/ashutoshJha-2025/Frontend-Projects.git",
-        bgImageUrl: "https://ik.imagekit.io/ashutosh054/Portfolio/Screenshot%202025-12-28%20122952.png?updatedAt=1781331446646"
+        bgImageUrl: weatherAppBgImage
     },
 
     {
@@ -131,7 +138,7 @@ const projects = [
         glowColor: "shadow-red-500/20",
         liveUrl: "https://ashutoshjha-2025.github.io/Thumbnail_Designs/",
         githubUrl: "https://github.com/ashutoshJha-2025/Thumbnail_Designs.git",
-        bgImageUrl: "https://ik.imagekit.io/ashutosh054/Portfolio/image.png?updatedAt=1781331519327"
+        bgImageUrl: thumbnailBgImage
     },
 ];
 
@@ -245,9 +252,9 @@ const ProjectPage = () => {
                         <p className="text-orange-100 text-sm mt-0.5">Open to internships, freelance, and collaborations.</p>
                     </div>
                     <button
-                        onClick={() => navigate('/portfolio-remake/contact')}
+                        onClick={() => navigate('/contact')}
                         className="shrink-0 cursor-pointer bg-white text-orange-500 font-bold text-sm px-6 py-3 rounded-xl hover:bg-orange-50 active:scale-95 transition-all duration-150 shadow-sm">
-                        Contact Me
+                        Let's Connect
                     </button>
                 </div>
             </div>

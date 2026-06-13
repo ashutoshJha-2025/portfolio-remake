@@ -5,6 +5,7 @@ import SkillsPage from "./pages/SkillsPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import { ToastMessageBox } from "./components/ToastMessageBox.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
+import PageNotFound from "./pages/PageNotFound.jsx";
 
 function App() {
   return (
@@ -12,10 +13,11 @@ function App() {
     <ToastMessageBox />
       <Navbar />
       <Routes>
-        <Route path="/portfolio-remake" element={<AboutPage />} />
-        <Route path="/portfolio-remake/skills" element={<SkillsPage />} />
-        <Route path="/portfolio-remake/contact" element={<ContactPage />} />
-        <Route path="/portfolio-remake/projects" element={<ProjectPage />} />
+        <Route path="/" element={<AboutPage />} />
+        <Route path="/skills" element={<SkillsPage />} />
+        <Route path="/projects" element={<ProjectPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>
   )

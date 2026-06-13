@@ -1,3 +1,8 @@
+import ctfBgImage from '../assets/ctfCertificate.png'
+import udemyBgImage from '../assets/udemyCertificate.png'
+import unstopBgImage from '../assets/unstopCertificate.png'
+import javaBgImage from '../assets/javaCertificate.png'
+
 function CertificateCard({ image, issuer, description, link }) {
     return (
         <>
@@ -26,25 +31,25 @@ function Certificates() {
 
     const certificates = [
         {
-            image: "https://ik.imagekit.io/ashutosh054/Portfolio/Screenshot%202026-06-12%20135036.png?updatedAt=1781252492060",
+            image: udemyBgImage,
             issuer: "Udemy",
             description: "Completed web development course.",
             link: `https://ashutoshjha-2025.github.io/portfolio-remake${udemyCert}`
         },
         {
-            image: "https://ik.imagekit.io/ashutosh054/Portfolio/Screenshot%202026-06-12%20135109.png?updatedAt=1781252492027",
+            image: ctfBgImage,
             issuer: "KJSSE CTF 3.0",
             description: "Participated in an capture the flag cybersecurity competition organized by KJSSE.",
             link: `https://ashutoshjha-2025.github.io/portfolio-remake${ctfCert}`
         },
         {
-            image: "https://ik.imagekit.io/ashutosh054/Portfolio/unstop%20hackathon.png?updatedAt=1781239730216",
+            image: unstopBgImage,
             issuer: "Unstop",
             description: "Participated in an individual online hackathon of AlgoQuiz-DSA MCQ.",
             link: `https://ashutoshjha-2025.github.io/portfolio-remake${unstopCert}`
         },
         {
-            image: "https://ik.imagekit.io/ashutosh054/Portfolio/java%20completion.png?updatedAt=1781239730209",
+            image:javaBgImage,
             issuer: "IIT Bombay",
             description: "Completed a course covering Java fundamentals, OOP concepts.",
             link: `https://ashutoshjha-2025.github.io/portfolio-remake${javaCert}`

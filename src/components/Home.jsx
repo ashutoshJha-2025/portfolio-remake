@@ -1,6 +1,5 @@
 import double_quotes from "../assets/double_quotes.png";
-
-const profileImg = "https://ik.imagekit.io/ashutosh054/Portfolio/Mine_image.png?updatedAt=1781239212839"
+import profileImg from '../assets/Mine_image.png' 
 
 function Home() {
     return (
