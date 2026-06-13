@@ -82,7 +82,7 @@ function ContactPage() {
             <div id="contact" className="w-screen min-h-screen flex flex-col relative">
                 <div className="flex flex-col items-start justify-end w-full h-33 px-4">
                     <h3 className="text-[#f37329] text-5xl font-semibold max-lg:text-4xl max-md:text-3xl">Resume</h3>
-                    <button className="bg-[#0FA673] text-white py-1.5 px-2.5 rounded-lg text-md max-md:text-sm font-medium cursor-pointer hover:bg-[#0c8e60] transition-all duration-150 ease-in" onClick={() => window.open("https://ik.imagekit.io/ashutosh054/resumes/document_nw-NNpX9Z.pdf?updatedAt=1780812308146", "_blank")}>📄 View Resume</button>
+                    <button className="bg-[#0FA673] text-white py-1.5 px-2.5 rounded-lg text-md max-md:text-sm font-medium cursor-pointer hover:bg-[#0c8e60] transition-all duration-150 ease-in" onClick={() => window.open("https://ik.imagekit.io/ashutosh054/resumes/newResume%20.pdf?updatedAt=1781341778253", "_blank")}>📄 View Resume</button>
                 </div>
 
                 <div className="flex flex-col items-center">

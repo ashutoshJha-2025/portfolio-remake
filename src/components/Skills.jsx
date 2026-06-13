@@ -71,12 +71,11 @@ const skills = [
     },
 ];
 
-
 function SkillCard({ skill, index }) {
     return (
         <div className="group relative bg-white rounded-2xl p-6 shadow-sm border border-gray-200  hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-default overflow-hidden">
             <div className={`absolute top-0 left-0 right-0 h-1 bg-linear-to-r ${skill.color} rounded-t-2xl`} />
-            <span className="absolute top-5 right-5 text-5xl font-black text-gray-50 select-none leading-none">
+            <span className="absolute top-5 right-5 text-5xl font-black text-gray-100 select-none leading-none">
                 {String(index + 1).padStart(2, "0")}
             </span>
             <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-linear-to-br ${skill.color} text-white mb-4 shadow-md mr-2`}>
@@ -103,7 +102,6 @@ function SkillCard({ skill, index }) {
         </div>
     );
 }
-
 
 function Skills() {
     return (
