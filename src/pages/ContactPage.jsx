@@ -5,7 +5,7 @@ import linkedinIcon from "../assets/linkedin_logo.png"
 import arrow_img from "../assets/arrow.svg";
 import { useState } from 'react'
 import emailjs from '@emailjs/browser';
-import { showSuccess, showError,showWarning, showInfo } from "../components/ToastMessageBox.jsx";
+import { showSuccess, showError,showWarning } from "../components/ToastMessageBox.jsx";
 
 function ContactPage() {
     const resume = `/ATS-Resume-latest.pdf`
@@ -35,7 +35,7 @@ function ContactPage() {
         };
 
         emailjs.send(serviceId, templateId, templateParams, publicKey)
-            .then((response) => {
+            .then(() => {
                 showSuccess(`Email sent successfully`);
                 setName('');
                 setMessage('');
@@ -66,7 +66,7 @@ function ContactPage() {
         };
 
         emailjs.send(serviceId, templateId, templateParams, publicKey)
-            .then((response) => {
+            .then(() => {
                 showSuccess("Email sent successfully");
                 setEmail('');
             })

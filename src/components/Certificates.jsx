@@ -49,7 +49,7 @@ function Certificates() {
             link: `https://ashutoshjha-2025.github.io/portfolio-remake${unstopCert}`
         },
         {
-            image:javaBgImage,
+            image: javaBgImage,
             issuer: "IIT Bombay",
             description: "Completed a course covering Java fundamentals, OOP concepts.",
             link: `https://ashutoshjha-2025.github.io/portfolio-remake${javaCert}`
@@ -66,6 +66,7 @@ function Certificates() {
             <div className=" flex h-auto w-[95%] items-center justify-around  max-md:flex-wrap">
                 {certificates.map((job, i) => (
                     <CertificateCard
+                        key={i}
                         image={job.image}
                         issuer={job.issuer}
                         description={job.description}
