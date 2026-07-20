@@ -23,7 +23,7 @@ const skills = [
             </svg>
         ),
         color: "from-orange-500 to-red-400",
-        description: "Built full-stack web applications using the MERN stack. Developed responsive user interfaces with React and Tailwind CSS, created REST APIs with Node.js and Express, integrated databases using MongoDB (Mongoose) and MySQL, and tested APIs using Postman.",
+        description: "Built full stack web applications using the MERN stack. Developed responsive user interfaces with React and Tailwind CSS, created REST APIs with Node.js and Express, integrated databases using MongoDB (Mongoose) and MySQL, and tested APIs using Postman.",
         tags: [
             "React",
             "Tailwind CSS",

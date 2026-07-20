@@ -6,11 +6,12 @@ import dsaJavaBgImage from '../assets/dsaJavaBgImage.png'
 import reactBgImage from '../assets/reactBgImage.png'
 import weatherAppBgImage from '../assets/weatherAppBgImage.png'
 import thumbnailBgImage from '../assets/ThumbanailDesignBgImage.png'
+import letterBgImage from '../assets/letterBgImage.png'
 
 const projects = [
     {
         id: 1,
-        title: "Portfolio Remake",
+        title: "Portfolio",
         subtitle: "React Developer Portfolio",
         year: "2025",
         tags: ["React", "TailwindCSS", "Email js"],
@@ -34,7 +35,8 @@ const projects = [
         subtitle: "Finance Management System",
         year: "2026",
         tags: ["Express", "React", "Node.js", "MongoDB", "TailwindCSS"],
-        badge: "",
+        badge: "Backend",
+        badgeEmoji: "",
         badgeColor: "bg-blue-600/80 text-blue-100",
         description:
             "A complete expense tracking with transaction management, categories, accounts, and REST APIs for personal finance monitoring.",
@@ -53,6 +55,8 @@ const projects = [
         subtitle: "MERN Stack Application",
         year: "2026",
         tags: ["Express", "React", "Node.js", "MongoDB", "TailwindCSS"],
+        badge: "",
+        badgeEmoji: "",
         badgeColor: "bg-green-600/80 text-green-100",
         description:
             "A job portal where recruiters can post jobs and candidates can browse and apply.",
@@ -91,6 +95,7 @@ const projects = [
         year: "2026",
         tags: ["React", "TailwindCSS", "Context API", "Router"],
         badge: "Frontend",
+        badgeEmoji: "",
         badgeColor: "bg-pink-600/80 text-pink-100",
         description:
             "A collection of React projects including Theme Toggle, Product Store, and Todo App focused on reusable components and responsive UI design.",
@@ -98,7 +103,7 @@ const projects = [
         accentColor: "text-pink-400",
         borderAccent: "border-pink-500/40",
         glowColor: "shadow-pink-500/20",
-        liveUrl: "https://ashutoshjha-2025.github.io/ReactJS_Projects/02_ProductStore/",
+        liveUrl: " https://ashutoshjha-2025.github.io/ReactJS_Projects/04_DiningTable/",
         githubUrl: "https://github.com/ashutoshJha-2025/ReactJS_Projects.git",
         bgImageUrl: reactBgImage
     },
@@ -110,6 +115,7 @@ const projects = [
         year: "2025",
         tags: ["HTML", "TailwindCSS", "JavaScript"],
         badge: "",
+        badgeEmoji: "",
         badgeColor: "bg-yellow-600/80 text-yellow-100",
         description:
             "A collection of frontend projects including News Website, Weather App, and Todo App built using core web technologies.",
@@ -139,6 +145,25 @@ const projects = [
         liveUrl: "https://ashutoshjha-2025.github.io/Thumbnail_Designs/",
         githubUrl: "https://github.com/ashutoshJha-2025/Thumbnail_Designs.git",
         bgImageUrl: thumbnailBgImage
+    },
+
+    {
+        id: 8,
+        title: "Proposal Letter",
+        subtitle: "Interactive React Proposal App",
+        year: "2026",
+        tags: ["React", "React Router", "TailwindCSS", "Vite"],
+        badge: "Vibe Coding",
+        badgeColor: "bg-orange-300/80 text-orange-950",
+        description:
+            "A fun proposal web app that lets users create a personalized letter, generate a shareable link, and surprise their loved one with an escaping NO button, animated YES button, and playful taglines.",
+        gradient: "from-orange-100 via-amber-200 to-orange-300",
+        accentColor: "text-orange-300",
+        borderAccent: "border-orange-300/40",
+        glowColor: "shadow-orange-300/30",
+        liveUrl: "https://ashutoshjha-2025.github.io/Valentine-Special/#/",
+        githubUrl: "https://github.com/ashutoshJha-2025/Valentine-Special",
+        bgImageUrl: letterBgImage,
     },
 ];
 

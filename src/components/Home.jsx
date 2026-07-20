@@ -19,7 +19,7 @@ function Home() {
 
                 <div className="w-75 flex flex-col gap-5 absolute sm:top-[45%] left-[4%]  max-lg:hidden max-sm:block max-sm:bottom-30">
                     <div className="max-sm:hidden"><img src={double_quotes} alt="doubleQuotes" loading="lazy" className="w-15" /></div>
-                    <span className="text-[#3a3939] font-medium pl-3 max-sm:text-sm max-sm:pl-0">Passionate about building impactful web applications, solving real-world problems. Always curious, always learning, always coding.</span>
+                    <span className="text-[#3a3939] font-medium pl-3 max-sm:text-sm max-sm:pl-0">Passionate about building impactful web applications, solving real world problems. Always curious, always learning, always coding.</span>
                 </div>
 
                 <div className="absolute sm:top-[55%] right-0 mr-7 max-md:mr-2 max-sm:bottom-5 max-sm:flex max-sm:flex-col max-sm:items-center">

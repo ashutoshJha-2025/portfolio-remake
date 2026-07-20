@@ -39,7 +39,7 @@ function Certificates() {
         {
             image: ctfBgImage,
             issuer: "KJSSE CTF 3.0",
-            description: "Participated in an capture the flag cybersecurity competition organized by KJSSE.",
+            description: "Participated in an capture the flag cybersecurity competition.",
             link: `https://ashutoshjha-2025.github.io/portfolio-remake${ctfCert}`
         },
         {
