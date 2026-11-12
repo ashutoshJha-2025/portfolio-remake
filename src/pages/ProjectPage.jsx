@@ -30,12 +30,31 @@ const projects = [
     },
 
     {
+        id: 9,
+        title: "AI Interview Ready Platform",
+        subtitle: "Full-Stack MERN Project",
+        year: "2026",
+        tags: ["Gemini AI", "OTP Verification", "Redis", "Nodemailer"],
+        badge: "In_Progress",
+        // badgeEmoji: "🤖",
+        badgeColor: "bg-teal-600/80 text-teal-100",
+        description:"A full-stack mock interview platform that generates role-specific questions with Google Gemini, evaluates your answers with a score and feedback, and tracks progress through history and flashcards.",
+        gradient: "from-zinc-900 via-teal-950 to-slate-900",
+        accentColor: "text-teal-400",
+        borderAccent: "border-teal-500/40",
+        glowColor: "shadow-teal-500/20",
+        liveUrl: "https://ai-interview-ready-platform.vercel.app",
+        githubUrl: "https://github.com/ashutoshJha-2025/AI-Interview-Ready-Platform",
+        bgImageUrl: portfolioBgImage,
+    },
+
+    {
         id: 2,
         title: "Expense Tracker",
         subtitle: "Finance Management System",
         year: "2026",
         tags: ["Express", "React", "Node.js", "MongoDB", "TailwindCSS"],
-        badge: "Backend",
+        badge: "MERN",
         badgeEmoji: "",
         badgeColor: "bg-blue-600/80 text-blue-100",
         description:

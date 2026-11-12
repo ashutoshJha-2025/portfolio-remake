@@ -13,7 +13,7 @@ function Home() {
                 </div>
 
                 <div className="w-130 h-65 rounded-t-full bg-[#F6AD76] absolute bottom-0 lg:left-1/2 -translate-x-1/2 overflow-visible md:left-60 max-sm:hidden sm:left-60">
-                    <img src={profileImg} alt="mine image" className="absolute w-200 left-1/2 -translate-x-1/2 bottom-0 drop-shadow-[5px_5px_10px_#555] " />
+                    <img src={profileImg} alt="mine image" className="absolute w-100 left-1/2 -translate-x-1/2 bottom-0 drop-shadow-[5px_5px_10px_#555] " />
                 </div>
                 <img src={profileImg} alt="mine image" loading="eager" className="absolute w-60 left-1/2 -translate-x-1/2 bottom-60 sm:hidden" />
 
