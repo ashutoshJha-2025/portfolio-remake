@@ -7,6 +7,7 @@ import reactBgImage from '../assets/reactBgImage.png'
 import weatherAppBgImage from '../assets/weatherAppBgImage.png'
 import thumbnailBgImage from '../assets/ThumbanailDesignBgImage.png'
 import letterBgImage from '../assets/letterBgImage.png'
+import aiInterviewBgImage from '../assets/aiInterviewBgImage.png'
 
 const projects = [
     {
@@ -45,7 +46,7 @@ const projects = [
         glowColor: "shadow-teal-500/20",
         liveUrl: "https://ai-interview-ready-platform.vercel.app",
         githubUrl: "https://github.com/ashutoshJha-2025/AI-Interview-Ready-Platform",
-        bgImageUrl: portfolioBgImage,
+        bgImageUrl: aiInterviewBgImage,
     },
 
     {
