@@ -8,7 +8,7 @@ import emailjs from '@emailjs/browser';
 import { showSuccess, showError,showWarning } from "../components/ToastMessageBox.jsx";
 
 function ContactPage() {
-    const resume = `/Resume.pdf`
+    const resume = `/resume-softcopy.pdf`
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
